@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+// @ts-ignore
+import data from './data.json';
+import {Employee} from "../../models/employee";
 
 @Component({
   selector: 'app-tables',
@@ -7,7 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TablesComponent implements OnInit {
 
-  constructor() { }
+  employee: Employee[] = data;
+
+  constructor() {
+    console.log(this.employee);
+  }
 
   ngOnInit(): void {
   }
