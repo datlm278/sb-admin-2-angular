@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-// @ts-ignore
-import data from './data.json';
+import {Component, OnInit} from '@angular/core';
+import EmployeeData from '/src/app/data.json'
 import {Employee} from "../../models/employee";
 
 @Component({
@@ -10,13 +9,24 @@ import {Employee} from "../../models/employee";
 })
 export class TablesComponent implements OnInit {
 
-  employee: Employee[] = data;
+  employee: Employee[] = EmployeeData;
+  pageSize: number = 5;
+  pageSizes: number[] = [5, 10, 15];
+  page: number = 1;
+  count: number = 0;
 
   constructor() {
-    console.log(this.employee);
   }
 
   ngOnInit(): void {
+
   }
 
+  handlePageSizeChange(event: any): void {
+    this.pageSize = event.target.value;
+    this.page = 1;
+  }
+  handlePageChange(event: number): void {
+    this.page = event;
+  }
 }

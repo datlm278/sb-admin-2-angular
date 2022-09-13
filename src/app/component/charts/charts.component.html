@@ -32,7 +32,13 @@
       </div>
       <div class="card-body">
         <div class="chart-bar">
-          <canvas id="myBarChart"></canvas>
+          <canvas baseChart
+                  [data]="barChartData"
+                  [options]="barChartOptions"
+                  [plugins]="barChartPlugins"
+                  [legend]="barChartLegend"
+                  [type]="'bar'">
+          </canvas>
         </div>
         <hr>
         Styling for the bar chart can be found in the
