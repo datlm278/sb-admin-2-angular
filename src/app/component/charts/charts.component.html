@@ -63,8 +63,15 @@
       </div>
       <!-- Card Body -->
       <div class="card-body">
-        <div class="pt-4">
-          <canvas id="myPieChart"></canvas>
+        <div>
+          <canvas baseChart
+                  [labels]="doughnutChartLabels"
+                  id="myPieChart"
+                  [datasets]="doughnutChartDatasets"
+                  [options]="doughnutChartOptions"
+                  [legend]="true"
+                  [type]="'doughnut'">
+          </canvas>
         </div>
         <hr>
         Styling for the donut chart can be found in the
