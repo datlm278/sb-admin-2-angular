@@ -26,7 +26,7 @@ const routes: Routes = [
     path: 'admin',
     component: AdminComponent,
     children: [
-      {path: 'dashboard', component: DashboardComponent, title: 'sb-admin-2 Dashboard'},
+      {path: 'dashboard', component: DashboardComponent, title: 'Dashboard'},
       {
         path: 'component/button',
         component: ButtonComponent,
