@@ -16,8 +16,13 @@
         <h6 class="m-0 font-weight-bold text-primary">Area Chart</h6>
       </div>
       <div class="card-body">
-        <div class="chart-area">
-          <canvas id="myAreaChart"></canvas>
+        <div>
+          <canvas baseChart width="100%" height="50%"
+                  [type]="'line'"
+                  [data]="lineChartData"
+                  [options]="lineChartOptions"
+                  [legend]="lineChartLegend">
+          </canvas>
         </div>
         <hr>
         Styling for the area chart can be found in the
@@ -31,8 +36,10 @@
         <h6 class="m-0 font-weight-bold text-primary">Bar Chart</h6>
       </div>
       <div class="card-body">
-        <div class="chart-bar">
+        <div>
           <canvas baseChart
+                  id="myBarChart"
+                  width="100%"
                   [data]="barChartData"
                   [options]="barChartOptions"
                   [plugins]="barChartPlugins"
@@ -45,7 +52,6 @@
         <code>/assets/js/demo/chart-bar-demo.js</code> file.
       </div>
     </div>
-
   </div>
 
   <!-- Donut Chart -->
@@ -57,7 +63,7 @@
       </div>
       <!-- Card Body -->
       <div class="card-body">
-        <div class="chart-pie pt-4">
+        <div class="pt-4">
           <canvas id="myPieChart"></canvas>
         </div>
         <hr>
